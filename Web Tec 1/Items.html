@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="product-details" class="product-details-container">
+    <!-- loading the product-->
+</div>
+
+<footer> <!-- Same Footer -->
+    <button id="top-of-page" onclick="location.href='Item.html'"> &#8593;</button>
+    <p>&copy; 2025 UClan Web Page. All rights reserved. </p>
+</footer>
+<script>
+    // All the products data goes here
+
+    const ProductDetails = {
+        1: {
+            "productName": "Legacy T-Shirt - Red",
+            price: "7.99",
+            image: "images/tshirts/tshirt1.jpg",
+            description: "Perfect for those graduating this year. Get a bargain whilst we have the stock."
+        },
+
+        2: {
+            "productName": "Legacy T-Shirt - Green",
+            price: "7.99",
+            image: "images/tshirts/tshirt2.jpg",
+            description: "Limited stock. Grab these nostalgic items before they make their way onto eBay."
+        },
+        3: {
+            "productName": "Legacy T-Shirt - Blue",
+            price: "7.99",
+            image: "images/tshirts/tshirt3.jpg",
+            description: "Sadly we are sold out of this legendary item. Keep an eye out for future stock."
+        },
+        4: {
+            "productName": "Legacy T-Shirt - Cyan",
+            price: "7.99",
+            image: "images/tshirts/tshirt4.jpg",
+            description: "Perfect for those graduating this year. Get a bargain whilst we have the stock."
+        },
+        5: {
+            "productName": "Legacy T-Shirt - Magenta",
+            price: "7.99",
+            image: "images/tshirts/tshirt5.jpg",
+            description: "Sadly we are sold out of this legendary item. Keep an eye out for future stock."
+        },
+        6: {
+            "productName": "Legacy T-Shirt - Yellow",
+            price: "7.99",
+            image: "images/tshirts/tshirt6.jpg",
+            description: "Limited stock. Grab these nostalgic items before they make their way onto eBay."
+        },
+        7: {
+            "productName": "Legacy T-Shirt - Black",
+            price: "7.99",
+            image: "images/tshirts/tshirt7.jpg",
+            description: "Sadly we are sold out of this legendary item. Keep an eye out for future stock."
+        },
+        8: {
+            "productName": "Legacy T-Shirt - Grey",
+            price: "7.99",
+            image: "images/tshirts/tshirt8.jpg",
+            description: "Perfect for those graduating this year. Get a bargain whilst we have the stock."
+        },
+        9: {
+            "productName": "Legacy T-Shirt - Burgundy",
+            price: "7.99",
+            image: "images/tshirts/tshirt9.jpg",
+            description: "Limited stock. Grab these nostalgic items before they make their way onto eBay."
+        }
+    };
+
+    // get the product id from the url
+    document.addEventListener("DOMContentLoaded", function() {
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+    const product = ProductDetails[Number(id)];
+    const container = document.getElementById("product-details");
+
+    // show the product
+    if(!container) {
+        console.error("Product not found!");
+        return;
+    }
+    if (!product) {
+            container.innerHTML = '<h2>Product not found.</h2>';
+            return;
+        }
+    else{
+       container.innerHTML = `
+       <h1>${product.productName}</h1>
+       <img src="${product.image}" alt="${product.productName}">
+       <p>Price: ${product.price}</p>
+       <p>${product.description}</p>
+
+       <label for="quantity">Quantity:</label>
+       <input type="number" id="quantity" min="1" value="1">
+        <button type="button"
+       id="add-to-cart"
+       data-name="${product.productName}"
+       data-price="${product.price}"
+       data-image="${product.image}">
+       Add to Cart
+   </button>
+       <a href="products.html" class="back-link">Back to products</a>
+       `;
+    }
+        //add to the cart button
+        const addToCartButtons = document.getElementById('add-to-cart');
+
+        addToCartButtons.addEventListener('click', () => {
+            let quantity = parseInt(document.getElementById("quantity").value);
+            if(isNaN(quantity)|| quantity <1) quantity = 1;
+
+            const item = { // create item object
+                name: addToCartButtons.dataset.name, // takes the name of data-name
+                price: parseFloat(addToCartButtons.dataset.price), // takes the price from data-prices and turns it to a number
+                image: addToCartButtons.dataset.image, // data-image
+                quantity: quantity // will take quantity at time
+            }
+
+            let cart;
+            if (localStorage.getItem("cart")) {  // gets current cart from local storage
+                cart = JSON.parse(localStorage.getItem("cart"));
+            } else{
+                cart= [];
+            }
+
+            //check if item already exists
+            const existing = cart.find(i => i.name === item.name);
+            if (existing) {
+                existing.quantity += quantity; // increment quantity
+            } else
+                cart.push(item); //add new item
+
+            localStorage.setItem('cart', JSON.stringify(cart)); // saves updated cart to local storage
+
+            alert(item.name + ' added to cart'); // confirmation
+            console.log(cart); //debug shows current cart
+        });
+
+    });
+</script>
+</body>
+</html>

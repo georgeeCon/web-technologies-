@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="style.css"> <!-- link the html with css -->
+</head>
+<body>
+
+<header> <!-- Same Header -->
+    <img class="logo" src="images/logo_reverse.png" alt="Uclan Logo">
+    <nav> <!-- navigates to the 3 pages -->
+        <button class="hamburger"> &#9776;</button> <!-- hamburger icon -->
+        <ul class="main-nav"> <!-- list of pages -->
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class = "product-container">
+    <div class="product-card in-stock" > <!-- Product 1-->
+        <a href="Items.html?id=1">
+        <img src="images/tshirts/tshirt1.jpg" alt="Legacy T-Shirt - Red" class="product-image">
+        </a>
+        <h2>Legacy T-Shirt - Red</h2>
+        <p>Perfect for those graduating this year. Get a bargain whilst we have the stock.</p>
+        <p>Price: £7.99</p>
+        <p>Status: Good Stock</p>
+        <label for="quantity1">Quantity:</label>
+        <input type="number" id="quantity1" min="1" value="1">
+        <button class="add-to-cart" data-name="Legacy T-Shirt - Red" data-price="7.99" data-image="images/tshirts/tshirt1.jpg">
+            Add to Cart</button> <!-- saves the data everytime you click the button-->
+    </div>
+
+    <div class="product-card last-few" > <!-- Product 2-->
+        <a href="Items.html?id=2">
+        <img src="images/tshirts/tshirt2.jpg" alt="Legacy T-Shirt - Green" class="product-image">
+        </a>
+        <h2>Legacy T-Shirt - Green</h2>
+        <p>Limited stock. Grab these nostalgic items before they make their way onto eBay.</p>
+        <p>Price: £7.99</p>
+        <p>Status: Last Few</p>
+        <label for="quantity2">Quantity:</label>
+        <input type="number" id="quantity2" min="1" value="1">
+        <button class="add-to-cart" data-name="Legacy T-Shirt - Green" data-price="7.99" data-image="images/tshirts/tshirt2.jpg">
+            Add to Cart</button> <!-- saves the data everytime you click the button-->
+    </div>
+
+    <div class="product-card out-of-stock" > <!-- Product 3-->
+        <a href="Items.html?id=3">
+        <img src="images/tshirts/tshirt3.jpg" alt="Legacy T-Shirt - Blue" class="product-image">
+        </a>
+        <h2>Legacy T-Shirt - Blue</h2>
+        <p>Sadly we are sold out of this legendary item. Keep an eye out for future stock.</p>
+        <p>Price: £7.99</p>
+        <p>Status: Out of Stock</p>
+        <label for="quantity3">Quantity:</label>
+        <input type="number" id="quantity3" min="1" value="1">
+        <button class="add-to-cart" data-name="Legacy T-Shirt - Blue" data-price="7.99" data-image="images/tshirts/tshirt3.jpg">
+            Add to Cart</button> <!-- saves the data everytime you click the button-->
+    </div>
+
+
+    <div class="product-card in-stock" > <!-- Product 4-->
+        <a href="Items.html?id=4">
+        <img src="images/tshirts/tshirt4.jpg" alt="Legacy T-Shirt - Cyan" class="product-image">
+        </a>
+        <h2>Legacy T-Shirt - Cyan</h2>
+        <p>Perfect for those graduating this year. Get a bargain whilst we have the stock.</p>
+        <p>Price: £7.99</p>
+        <p>Status: Good Stock</p>
+        <label for="quantity4">Quantity:</label>
+        <input type="number" id="quantity4" min="1" value="1">
+        <button class="add-to-cart" data-name="Legacy T-Shirt - Cyan" data-price="7.99" data-image="images/tshirts/tshirt4.jpg">
+            Add to Cart</button> <!-- saves the data everytime you click the button-->
+    </div>
+
+    <div class="product-card out-of-stock" > <!-- Product 5-->
+        <a href="Items.html?id=5">
+        <img src="images/tshirts/tshirt5.jpg" alt="Legacy T-Shirt - Magenta" class="product-image">
+        </a>
+        <h2>Legacy T-Shirt - Magenta</h2>
+        <p>Sadly we are sold out of this legendary item. Keep an eye out for future stock.</p>
+        <p>Price: £7.99</p>
+        <p>Status: Out of Stock</p>
+        <label for="quantity5">Quantity:</label>
+        <input type="number" id="quantity5" min="1" value="1">
+        <button class="add-to-cart" data-name="Legacy T-Shirt - Magenta" data-price="7.99" data-image="images/tshirts/tshirt5.jpg">
+            Add to Cart</button> <!-- saves the data everytime you click the button-->
+    </div>
+
+    <div class="product-card last-few" > <!-- Product 6-->
+        <a href="Items.html?id=6">
+        <img src="images/tshirts/tshirt6.jpg" alt="Legacy T-Shirt - Yellow" class="product-image">
+        </a>
+        <h2>Legacy T-Shirt - Yellow</h2>
+        <p>Limited stock. Grab these nostalgic items before they make their way onto eBay.</p>
+        <p>Price: £7.99</p>
+        <p>Status: Last Few</p>
+        <label for="quantity6">Quantity:</label>
+        <input type="number" id="quantity6" min="1" value="1">
+        <button class="add-to-cart" data-name="Legacy T-Shirt - Yellow" data-price="7.99" data-image="images/tshirts/tshirt6.jpg">
+            Add to Cart</button> <!-- saves the data everytime you click the button-->
+    </div>
+
+    <div class="product-card out-of-stock" > <!-- Product 7-->
+        <a href="Items.html?id=7">
+        <img src="images/tshirts/tshirt7.jpg" alt="Legacy T-Shirt - Black" class="product-image">
+        </a>
+        <h2>Legacy T-Shirt - Black</h2>
+        <p>Sadly we are sold out of this legendary item. Keep an eye out for future stock.</p>
+        <p>Price: £7.99</p>
+        <p>Status: Out of Stock</p>
+        <label for="quantity7">Quantity:</label>
+        <input type="number" id="quantity7" min="1" value="1">
+        <button class="add-to-cart" data-name="Legacy T-Shirt - Black" data-price="7.99" data-image="images/tshirts/tshirt7.jpg">
+            Add to Cart</button> <!-- saves the data everytime you click the button-->
+    </div>
+
+    <div class="product-card in-stock" > <!-- Product 8-->
+        <a href="Items.html?id=8">
+        <img src="images/tshirts/tshirt8.jpg" alt="Legacy T-Shirt - Grey" class="product-image">
+        </a>
+        <h2>Legacy T-Shirt - Grey</h2>
+        <p>Perfect for those graduating this year. Get a bargain whilst we have the stock.</p>
+        <p>Price: £7.99</p>
+        <p>Status: Good Stock</p>
+        <label for="quantity8">Quantity:</label>
+        <input type="number" id="quantity8" min="1" value="1">
+        <button class="add-to-cart" data-name="Legacy T-Shirt - Grey" data-price="7.99" data-image="images/tshirts/tshirt8.jpg">
+            Add to Cart</button> <!-- saves the data everytime you click the button-->
+    </div>
+
+    <div class="product-card last-few" > <!-- Product 9-->
+        <a href="Items.html?id=9">
+        <img src="images/tshirts/tshirt9.jpg" alt="Legacy T-Shirt - Burgundy" class="product-image">
+        </a>
+        <h2>Legacy T-Shirt - Burgundy</h2>
+        <p>Limited stock. Grab these nostalgic items before they make their way onto eBay.</p>
+        <p>Price: £7.99</p>
+        <p>Status: Last Few</p>
+        <label for="quantity9">Quantity:</label>
+        <input type="number" id="quantity9" min="1" value="1">
+        <button class="add-to-cart" data-name="Legacy T-Shirt - Burgundy" data-price="7.99" data-image="images/tshirts/tshirt9.jpg">
+            Add to Cart</button> <!-- saves the data everytime you click the button-->
+    </div>
+
+</main>
+
+<footer>
+    <button id="top-of-page" onclick="location.href='products.html'"> &#8593;</button>
+    <p>&copy; 2025 UClan Web Page. All rights reserved. </p>
+</footer>
+<!--java script-->
+<script>
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            const quantityInput = button.previousElementSibling; //gets the input before the user
+            const quantity = parseInt(quantityInput.value) || 1; // runs anyway
+            const item = { // create item object
+                name: button.dataset.name, // takes the name of the database
+                price: parseFloat(button.dataset.price), // takes the price from the dat-prices and turns it into number
+                image: button.dataset.image, //takes the image
+                quantity: quantity
+            }
+            let cart; // gets current cart from local storage
+            if (localStorage.getItem('cart')) {
+                console.log(localStorage.getItem('cart'));
+                cart = JSON.parse(localStorage.getItem('cart'));
+            }
+            else {
+                cart = [];
+            }
+            //check if the item already exists
+            const existing = cart.find(i => i.name === item.name);
+            if (existing) {
+                existing.quantity += quantity; //increment the quantity
+            }
+            else
+                cart.push(item); //add new item
+
+            localStorage.setItem('cart', JSON.stringify(cart)); // saves the updated cart to the local storage
+            alert(item.name+' added to cart'); //confirmation that is added to the cart
+            console.log(cart); // debug shows the current cart
+        });
+    })
+</script>
+<script src="cart.js"></script>
+</body>
+</html>

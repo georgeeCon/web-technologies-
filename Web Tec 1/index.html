@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UClan Web Page</title>
+    <link rel="stylesheet" href="style.css"> <!-- link the html with css -->
+</head>
+<body>
+
+<header>
+    <h2>Welcome to  UClan Web Page</h2> <!-- heading -->
+    <div>
+        <img class="logo" src="images/logo_reverse.png" alt="Uclan Logo">
+    </div>
+
+    <nav> <!-- navigates to the 3 pages -->
+        <button class="hamburger"> &#9776;</button> <!-- hamburger icon -->
+        <ul class="main-nav"> <!-- list of pages -->
+            <li><a href="index.html">Home</a></li> <!-- link for home page-->
+            <li><a href="products.html">Products</a></li> <!-- link for products page -->
+            <li><a href="cart.html">Cart</a></li> <!-- link for cart page -->
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+        <iframe
+                width="480"
+                height="300"
+                src="https://player.vimeo.com/video/1071072056?h=d4263dcc56">
+        </iframe> <!-- first video -->
+
+        <video controls
+        width="480"
+        height="300">
+            <source src="video.mp4" type="video/mp4"  > <!-- second video -->
+            </video>
+
+</main>
+
+<footer>
+    <button id="top-of-page" onclick="location.href='index.html'"> &#8593;</button>
+    <p>&copy; 2025 UClan Web Page. All rights reserved. </p>
+</footer>
+<script src="cart.js"></script>
+</body>
+</html>
